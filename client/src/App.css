@@ -11,15 +11,46 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: antiquewhite;
+  background-color: #002626;
+  color: #EAEFD3
 }
 
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #EFE7DA;
+}
 
+#searchForm {
+  background-color: #B3C0A4;
+  padding: 35px;
+  margin: 25px;
+  width: 300px;
+  border-radius: 5px;
+}
+
+form label {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #002626
+}
+
+form button {
+  margin: 10px;
+}
 
 footer {
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: antiquewhite;
+  background-color: #002626;
+  color: #EAEFD3;
+}
+
+footer p {
+  margin: 0
 }
