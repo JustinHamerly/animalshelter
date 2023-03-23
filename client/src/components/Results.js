@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Alert, Card, Container } from 'react-bootstrap'
+import { Alert, Card } from 'react-bootstrap'
 
 export default class Results extends Component {
   render() {
