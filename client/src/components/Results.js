@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Alert, Card } from 'react-bootstrap'
+import { Alert } from 'react-bootstrap'
+import Result from './Result'
 
 export default class Results extends Component {
   render() {
@@ -7,26 +8,18 @@ export default class Results extends Component {
       <>
         {
           this.props.showResults &&
+
           <section id='animalCards'>
             {
               this.props.results.map((animalObj, idx) => (
-                <Card key={idx} className='animalCard'>
-                  <Card.Img variant='top' src={animalObj.img}/>
-                  <Card.Body>
-                    <Card.Title>{animalObj.title}</Card.Title>
-                    <Card.Text>
-                      {animalObj.text}
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
+                <Result key={idx} animalObj={animalObj} />
               ))
             }
-            
           </section>
-
         }
         {
           this.props.showError &&
+          
           <Alert variant='info'>
             {this.props.eMessage}
           </Alert>

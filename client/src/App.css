@@ -46,8 +46,13 @@ form button {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  height: 400px;
+  height: 500px;
+  margin: 25px;
+  padding: 10px;
   overflow-y: auto;
+  background-color: #002626;
+  border-radius: 5px;
+  border: #B3C0A4 solid 5px;
 }
 
 .animalCard {
