@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 
-import SearchBar from './SearchBar'
+import SearchBar from './SearchBar';
+import Results from './Results';
 
 export default class Main extends Component {
   constructor(props){
@@ -37,13 +38,29 @@ export default class Main extends Component {
   }
 
 
+  resetSearch = () => {
+    this.setState({
+      animals: [],
+      showResults: false,
+      showError: false,
+      errorMessage: ''
+    })
+  }
+
+
   render() {
     return (
       <main>
         <SearchBar
           search={this.searchForAnimals}
+          reset={this.resetSearch}
         />
-        <p>display component</p>
+        <Results 
+          showResults={this.state.showResults}
+          showError={this.state.showError}
+          eMessage={this.state.errorMessage}
+          results={this.state.animals}
+        />
       </main>
     )
   }

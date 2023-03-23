@@ -18,6 +18,7 @@ export default class SearchBar extends Component {
   onSubmit = (e) => {
     e.preventDefault()
     this.props.search(this.state.searchText)
+    this.setState({searchText: ''})
   }
 
   render() {
@@ -29,6 +30,9 @@ export default class SearchBar extends Component {
         </Form.Group>
         <Button type='submit' variant='success'>
           Search
+        </Button>
+        <Button variant='secondary' onClick={this.props.reset}>
+          Reset
         </Button>
       </Form>
     )

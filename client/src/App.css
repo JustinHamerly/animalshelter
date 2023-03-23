@@ -42,6 +42,20 @@ form button {
   margin: 10px;
 }
 
+#animalCards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 400px;
+  overflow-y: auto;
+}
+
+.animalCard {
+  min-height: 400px;
+  width: 300px;
+  margin: 10px
+}
+
 footer {
   height: 50px;
   display: flex;
