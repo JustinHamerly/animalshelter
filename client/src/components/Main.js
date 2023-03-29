@@ -17,6 +17,9 @@ export default class Main extends Component {
 
   searchForAnimals = async (animalType) => {
     try {
+      // get api url 
+      // send api request to server to et info
+      // set the info to state
       const url = `${process.env.REACT_APP_SERVER}/animals?type=${animalType}`;
       const response = await axios.get(url);
       const animalResults = response.data;
